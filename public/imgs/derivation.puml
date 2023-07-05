@@ -1,0 +1,13 @@
+@startuml
+!theme lightgray
+
+card "<b>file.nix</b> with <i>derivation</i> statement" as nixfile
+
+card "<b>normalized derivation statement</b>\n<i>/nix/store/hash(.nix-file)-name-version.drv</i>" as drv
+
+card "<b>build result</b>\n<i>/nix/store/hash(.drv-file)-name-version</i>" as build
+
+nixfile --> drv: "$ nix-<b>instantiate</b>\n<i>normalise nix definition</i>"
+
+drv --> build: "$ nix-store --<b>realise</b>\n<i>execute build commands</i>"
+@enduml

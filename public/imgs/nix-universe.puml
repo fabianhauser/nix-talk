@@ -1,0 +1,16 @@
+@startuml
+!theme lightgray
+
+card NixOS
+card "<b>nixpkgs</b>\ngithub.com/NixOS/nixpkgs" as nixpkgs
+agent "<b>nix</b> (the language)" as nixlang
+agent "<b>nix</b> (the tool)\ngithub.com/NixOS/nix" as nixcli
+agent "nix <b>flakes</b>" as flakes
+
+nixcli --> NixOS: builds
+nixcli --right---> nixlang: parses
+NixOS -* nixpkgs: package of
+nixpkgs -|> "flakes": implements structure of
+nixlang --> flakes
+nixlang --> nixpkgs: used to define
+@enduml
