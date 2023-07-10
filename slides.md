@@ -165,13 +165,7 @@ The next line in the manual states:
 }
 ```
 
-So what happens when we run `nix build`?
-
----
-
-<div class="flex justify-center" style="text-align: center; margin: auto; height: 100%;">
-  <img src="/imgs/derivation.svg"/>
-</div>
+▶️ `nix build`
 
 ---
 layout: statement
@@ -190,7 +184,7 @@ layout: statement
 * Nobody uses `derivation` without abstraction.
 * We should use the Nix Flake structure for packages.
 
-Not to speak of this weird Nix language... 🙀
+And what is this weird `derivation` thing?... 🙀
 
 ---
 
@@ -393,7 +387,14 @@ Now you should be able to understand some more things.
 }
 ```
 
-So what happens if we try to evaluate this thing with `nix repl`?
+So again: what happens if we build this thing?
+
+
+---
+
+<div class="flex justify-center" style="text-align: center; margin: auto; height: 100%;">
+  <img src="/imgs/derivation.svg"/>
+</div>
 
 ---
 
