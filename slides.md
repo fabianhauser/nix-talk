@@ -68,6 +68,15 @@ Once upon a time in 2006...
 
 ---
 
+# 🎯 My Goals for Today: You...
+
+- are introduced you to the Nix universe
+- understand how NixOS is built up
+- know how to setup NixOS and nix in your projects
+- know where to look up stuff
+
+---
+
 # 🎯 What we'll take a look at today
 
 * `nix` (the tool)  
